@@ -1,20 +1,24 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SkateCore.Workflow;
+using SkateCore.Domain;
+using SkateCore.Workflow.Interfaces;
 
 namespace SkateCore.WebApi.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Skaters")]
+    [Route("api/[controller]")]
     public class SkatersController : Controller
     {
-        public string Get()
+        private readonly ISkaterWorkflow workflow;
+
+        public SkatersController(ISkaterWorkflow workflow)
         {
-            return new SkaterWorkflow().Get();
+            this.workflow = workflow;
+        }
+
+        public IList<Skater> Get()
+        {
+            return workflow.Get();
         }
     }
 }

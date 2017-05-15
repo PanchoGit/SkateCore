@@ -1,9 +1,9 @@
 ﻿using SkateCore.Domain;
 using System.Collections.Generic;
 
-namespace SkateCore.Workflow.Interfaces
+namespace SkateCore.Data.Interfaces
 {
-    public interface ISkaterWorkflow
+    public interface ISkaterData
     {
         IList<Skater> Get();
     }

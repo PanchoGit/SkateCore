@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Web", "7.Web", "{08251020-A735-4F8C-AEF2-24633B21BEEF}"
 EndProject
@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Workflow", "src\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Domain", "src\SkateCore.Domain\SkateCore.Domain.csproj", "{C93F7B4D-47B0-45A6-8D61-94C468C6DD3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Data", "src\SkateCore.Data\SkateCore.Data.csproj", "{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Common", "src\SkateCore.Common\SkateCore.Common.csproj", "{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,14 @@ Global
 		{C93F7B4D-47B0-45A6-8D61-94C468C6DD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C93F7B4D-47B0-45A6-8D61-94C468C6DD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C93F7B4D-47B0-45A6-8D61-94C468C6DD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +60,7 @@ Global
 		{1B7306D0-A354-474E-99B3-527CCB5E0610} = {08251020-A735-4F8C-AEF2-24633B21BEEF}
 		{7E46C89A-F43E-4529-A6C1-1ED40E36A1E8} = {8584E45C-5424-4889-BFA2-967191A26A27}
 		{C93F7B4D-47B0-45A6-8D61-94C468C6DD3D} = {3BAEB47A-DC97-416F-A7B1-D73199174B13}
+		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F} = {073A1ADB-F769-4B34-9639-715B8E918657}
+		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99} = {F492CBD4-B6F0-4A62-A2EF-B571980E054B}
 	EndGlobalSection
 EndGlobal

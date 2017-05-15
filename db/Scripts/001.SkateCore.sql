@@ -10,7 +10,7 @@ GO
 USE SkateCore
 GO
 
--- LAGalaxy App
+-- SkateCore App
 
 IF (NOT EXISTS (SELECT 1 FROM sys.syslogins where name = 'SkateCoreApp'))
 BEGIN
@@ -21,7 +21,7 @@ BEGIN
             CHECK_POLICY = OFF;
 END
 
-IF (NOT EXISTS (SELECT 1 FROM LaGalaxy.sys.database_principals where name = 'SkateCoreApp' ))
+IF (NOT EXISTS (SELECT 1 FROM SkateCore.sys.database_principals where name = 'SkateCoreApp' ))
 BEGIN
      CREATE USER SkateCoreApp FOR LOGIN SkateCoreApp WITH DEFAULT_SCHEMA = app;
 END
