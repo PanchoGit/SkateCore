@@ -1,22 +1,22 @@
 ﻿using SkateCore.Workflow.Interfaces;
 using SkateCore.Domain;
 using System.Collections.Generic;
-using SkateCore.Data.Interfaces;
+using SkateCore.Repository.Interfaces;
 
 namespace SkateCore.Workflow
 {
     public class SkaterWorkflow : ISkaterWorkflow
     {
-        private readonly ISkaterData data;
+        private readonly ISkaterRepository repository;
 
-        public SkaterWorkflow(ISkaterData data)
+        public SkaterWorkflow(ISkaterRepository repository)
         {
-            this.data = data;
+            this.repository = repository;
         }
 
-        public IList<Skater> Get()
+        public IEnumerable<Skater> Get()
         {
-            return data.Get();
+            return repository.Get();
         }
     }
 }

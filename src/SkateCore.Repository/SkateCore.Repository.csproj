@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SkateCore.Data\SkateCore.Data.csproj" />
+    <ProjectReference Include="..\SkateCore.Data.Entity\SkateCore.Data.Entity.csproj" />
     <ProjectReference Include="..\SkateCore.Domain\SkateCore.Domain.csproj" />
-    <ProjectReference Include="..\SkateCore.Repository\SkateCore.Repository.csproj" />
   </ItemGroup>
 
 </Project>

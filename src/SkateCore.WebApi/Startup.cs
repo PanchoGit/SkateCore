@@ -5,11 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Autofac;
-using SkateCore.Workflow;
-using SkateCore.Workflow.Interfaces;
 using Autofac.Extensions.DependencyInjection;
 using SkateCore.WebApi.Infrastructures;
-using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using SkateCore.Data.Entity;
 
 namespace SkateCore.WebApi
 {
@@ -33,6 +32,9 @@ namespace SkateCore.WebApi
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<SkateCoreContext>(options => options
+                .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             var builder = AutofacConfig.Register();
 

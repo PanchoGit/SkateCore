@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SkateCore.Data\SkateCore.Data.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SkateCore.Domain\SkateCore.Domain.csproj" />
-    <ProjectReference Include="..\SkateCore.Repository\SkateCore.Repository.csproj" />
   </ItemGroup>
 
 </Project>

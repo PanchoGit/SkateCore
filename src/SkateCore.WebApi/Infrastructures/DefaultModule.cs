@@ -8,17 +8,22 @@ namespace SkateCore.WebApi.Infrastructures
     {
         private const string DataAssemblyEndName = "Data";
         private const string WorkflowAssemblyEndName = "Workflow";
+        private const string RepositoryAssemblyEndName = "Repository";
 
         protected override void Load(ContainerBuilder builder)
         {
             var assemblies = AssemblyHelper.GetReferencingAssemblies("SkateCore").ToArray();
 
             builder.RegisterAssemblyTypes(assemblies)
+                .Where(s => s.Name.EndsWith(DataAssemblyEndName))
+                .AsImplementedInterfaces();
+
+            builder.RegisterAssemblyTypes(assemblies)
                 .Where(s => s.Name.EndsWith(WorkflowAssemblyEndName))
                 .AsImplementedInterfaces();
 
             builder.RegisterAssemblyTypes(assemblies)
-                .Where(s => s.Name.EndsWith(DataAssemblyEndName))
+                .Where(s => s.Name.EndsWith(RepositoryAssemblyEndName))
                 .AsImplementedInterfaces();
         }
     }

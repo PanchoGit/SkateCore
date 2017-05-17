@@ -16,7 +16,7 @@ namespace SkateCore.WebApi.Controllers
             this.workflow = workflow;
         }
 
-        public IList<Skater> Get()
+        public IEnumerable<Skater> Get()
         {
             return workflow.Get();
         }

@@ -1,9 +1,9 @@
 ﻿using SkateCore.Domain;
 using System.Collections.Generic;
 
-namespace SkateCore.Workflow.Interfaces
+namespace SkateCore.Repository.Interfaces
 {
-    public interface ISkaterWorkflow
+    public interface ISkaterRepository
     {
         IEnumerable<Skater> Get();
     }
