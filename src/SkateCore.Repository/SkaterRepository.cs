@@ -1,23 +1,19 @@
 ﻿using SkateCore.Repository.Interfaces;
-using System;
 using SkateCore.Domain;
 using System.Collections.Generic;
-using SkateCore.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace SkateCore.Repository
 {
-    public class SkaterRepository : ISkaterRepository
+    public class SkaterRepository : RepositoryBase<Skater, int>, ISkaterRepository
     {
-        private readonly SkateCoreContext context;
-
-        public SkaterRepository(SkateCoreContext context)
+        public SkaterRepository(SkateCoreContext context) : base(context)
         {
-            this.context = context;
         }
 
         public IEnumerable<Skater> Get()
         {
-            return context.Skaters;
+            return set.ToListAsync().Result;
         }
     }
 }

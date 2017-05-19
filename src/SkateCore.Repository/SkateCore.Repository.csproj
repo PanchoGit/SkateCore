@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SkateCore.Data.Entity\SkateCore.Data.Entity.csproj" />
+    <PackageReference Include="EntityFrameworkCore.MappingExtension" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SkateCore.Domain\SkateCore.Domain.csproj" />
   </ItemGroup>
 

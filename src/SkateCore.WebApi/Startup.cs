@@ -8,7 +8,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using SkateCore.WebApi.Infrastructures;
 using Microsoft.EntityFrameworkCore;
-using SkateCore.Data.Entity;
+using SkateCore.Repository;
 
 namespace SkateCore.WebApi
 {

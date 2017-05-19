@@ -30,8 +30,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Data", "3.Data", "{A6DDAB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Repository", "src\SkateCore.Repository\SkateCore.Repository.csproj", "{223B0EB1-C6EE-42C5-A3D4-0888AF12D770}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkateCore.Data.Entity", "src\SkateCore.Data.Entity\SkateCore.Data.Entity.csproj", "{18E00B08-BCFE-4586-90AF-09A72031C3BB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,10 +60,6 @@ Global
 		{223B0EB1-C6EE-42C5-A3D4-0888AF12D770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{223B0EB1-C6EE-42C5-A3D4-0888AF12D770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{223B0EB1-C6EE-42C5-A3D4-0888AF12D770}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18E00B08-BCFE-4586-90AF-09A72031C3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18E00B08-BCFE-4586-90AF-09A72031C3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18E00B08-BCFE-4586-90AF-09A72031C3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18E00B08-BCFE-4586-90AF-09A72031C3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +71,5 @@ Global
 		{8990CA83-348F-40A6-85E0-DAAEBEBF0E6F} = {073A1ADB-F769-4B34-9639-715B8E918657}
 		{7B9FFB34-2980-491A-B4FB-FE34BAD2AD99} = {F492CBD4-B6F0-4A62-A2EF-B571980E054B}
 		{223B0EB1-C6EE-42C5-A3D4-0888AF12D770} = {A6DDABF2-04A5-4AA8-ABD6-8ECFDF4E3F36}
-		{18E00B08-BCFE-4586-90AF-09A72031C3BB} = {073A1ADB-F769-4B34-9639-715B8E918657}
 	EndGlobalSection
 EndGlobal

@@ -26,7 +26,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SkateCore.Data.Entity\SkateCore.Data.Entity.csproj" />
     <ProjectReference Include="..\SkateCore.Workflow\SkateCore.Workflow.csproj" />
   </ItemGroup>
 
