@@ -6,5 +6,7 @@ namespace SkateCore.Repository.Interfaces
     public interface ISkaterRepository
     {
         IEnumerable<Skater> Get();
+
+        Skater Create(Skater skater);
     }
 }

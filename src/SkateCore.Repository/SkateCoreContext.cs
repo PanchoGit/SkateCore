@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using EntityFrameworkCore.MappingExtension;
-using SkateCore.Repository.Maps;
+using SkateCore.Repository.Extensions;
 using System.Reflection;
-using System.Linq;
-using System;
 
 namespace SkateCore.Repository
 {
@@ -19,16 +16,7 @@ namespace SkateCore.Repository
         {
             modelBuilder.HasDefaultSchema(AppSchema);
 
-            modelBuilder.AddMapping(new SkaterMap());
-
-            //var typesToRegister = Assembly.Load(new AssemblyName("SkateCore.Repository")).GetTypes()
-            //.Where(type => !String.IsNullOrEmpty(type.Namespace))
-            //.Where(type => type.GetTypeInfo().BaseType != null && type.GetTypeInfo().BaseType.GetTypeInfo().IsGenericType && type.GetTypeInfo().BaseType.GetGenericTypeDefinition() == typeof(ModelTypeConfiguration<>));
-            //foreach (var type in typesToRegister)
-            //{
-            //    dynamic configurationInstance = Activator.CreateInstance(type);
-            //    //modelBuilder.AddMapping<type.GetTypeInfo()>(configurationInstance);
-            //}
+            modelBuilder.AddEntityConfigurationsFromAssembly(Assembly.Load(new AssemblyName("SkateCore.Repository")));
 
             base.OnModelCreating(modelBuilder);
         }

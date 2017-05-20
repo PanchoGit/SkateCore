@@ -16,9 +16,10 @@ namespace SkateCore.WebApi.Controllers
             this.workflow = workflow;
         }
 
-        public IEnumerable<Skater> Get()
-        {
-            return workflow.Get();
-        }
+        [HttpGet]
+        public IEnumerable<Skater> Get() => workflow.Get();
+
+        [HttpPost]
+        public Skater Post([FromBody]Skater skater) => workflow.Post(skater);
     }
 }

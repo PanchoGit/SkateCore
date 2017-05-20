@@ -18,5 +18,10 @@ namespace SkateCore.Workflow
         {
             return repository.Get();
         }
+
+        public Skater Post(Skater skater)
+        {
+            return repository.Create(skater);
+        }
     }
 }

@@ -11,6 +11,15 @@ namespace SkateCore.Repository
         {
         }
 
+        public Skater Create(Skater skater)
+        {
+            var result = set.Add(skater);
+
+            context.SaveChanges();
+
+            return result.Entity;
+        }
+
         public IEnumerable<Skater> Get()
         {
             return set.ToListAsync().Result;
