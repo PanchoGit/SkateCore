@@ -7,6 +7,7 @@ namespace SkateCore.Repository
     public class SkateCoreContext : DbContext
     {
         private const string AppSchema = "app";
+        private const string RepositoryAssemblyName = "SkateCore.Repository";
 
         public SkateCoreContext(DbContextOptions options) : base(options)
         {
@@ -16,7 +17,7 @@ namespace SkateCore.Repository
         {
             modelBuilder.HasDefaultSchema(AppSchema);
 
-            modelBuilder.AddEntityConfigurationsFromAssembly(Assembly.Load(new AssemblyName("SkateCore.Repository")));
+            modelBuilder.AddEntityConfigurationsFromAssembly(Assembly.Load(new AssemblyName(RepositoryAssemblyName)));
 
             base.OnModelCreating(modelBuilder);
         }

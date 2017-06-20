@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using SkateCore.WebApi.Infrastructures;
-using Microsoft.EntityFrameworkCore;
 using SkateCore.Repository;
 
 namespace SkateCore.WebApi
@@ -53,7 +53,7 @@ namespace SkateCore.WebApi
 
             app.UseMvc();
 
-            appLifetime.ApplicationStopped.Register(() => this.ApplicationContainer.Dispose());
+            appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
     }
 }
